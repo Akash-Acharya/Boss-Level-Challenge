@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1><%= list_titles %></h1>
+    </div>
+
+    <div class="box">
+      <% for(let i = 0 ; i < add_lists.length; i++ ){ %>
+      <div class="item">
+        <!-- <i class="fa-duotone fa-check"></i> -->
+        <input type="checkbox" />
+        <p><%= add_lists[i] %></p>
+      </div>
+      <% } %>
+
+      <form class="item" action="/" method="post">
+        <input
+          type="text"
+          name="add_list"
+          placeholder="Add List"
+          autocomplete="off"
+        />
+        <button type="submit" name="b1" value="<%" ="list_title" %>
+          >
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
